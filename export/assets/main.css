@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@700&family=Montserrat&family=Noto+Sans:wght@500;700&display=swap');
+
+:root {
+    --background-color: #222;
+
+    --link-color: #AFF;
+    --text-color: #CCC;
+
+    --heading-font-family: 'Montserrat', sans-serif;
+    --logo-font-family: 'Domine', serif;
+    --text-font-family: 'Noto Sans', sans-serif;
+
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: var(--background-color);
+}
+
+div.row {
+    display: flex;
+    flex-direction: row;
+}
+
+div.landingpage section {
+    max-width: 350px;
+}
+
+#introduction {
+    padding-top: 30px;
+}
