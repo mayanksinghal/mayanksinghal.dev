@@ -25,7 +25,7 @@ export class MsElement extends HTMLElement {
     connectedCallback() {
         this.shadowRoot = this.attachShadow({mode: 'closed'});
         const template = document.createElement('template');
-        template.innerHTML = this.#templateFn.call(null, import.meta.url);
+        template.innerHTML = this.#templateFn();
         const docFragment = template.content.cloneNode(true);
 
         if (this.#stylesheetRelPath) {

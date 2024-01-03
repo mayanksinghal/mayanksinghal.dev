@@ -7,10 +7,25 @@
   <link rel="stylesheet" href="/assets/common.css">
 
   <script type="module" src="/assets/components/page.js"></script>
+  <script type="module" src="/assets/components/markdown.js"></script>
 </head>
 <body>
     <ms-page commonstyle="/assets/common.css" title="On Web Components">
-        <div slot="content"></div>
+        <ms-markdown slot="content">
+
+Example test
+
+### Heading
+
+```javascript
+export const linkStyle = function(href) {
+    const el = document.createElement('link');
+    el.href = href;
+    el.rel = 'stylesheet';
+    return el;
+}
+```
+        </ms-markdown>
     </ms-page>
 </body>
 </html>

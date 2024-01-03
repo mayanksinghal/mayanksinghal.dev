@@ -1,6 +1,6 @@
 import { MsElement } from './ms_element.js';
 
-function genTemplate(metaUrl) {
+function genTemplate() {
     return `
     <div class="container">
 
