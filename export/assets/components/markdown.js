@@ -1,11 +1,10 @@
 import hljs from 'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/es/highlight.min.js';
 import { Marked } from 'https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js';
 import { linkStyle } from './helpers.js';
-
-await import('https://cdn.jsdelivr.net/npm/marked-highlight/lib/index.umd.js');
+import { markedHighlight } from 'https://cdn.jsdelivr.net/npm/marked-highlight@2.1.0/src/index.js';
 
 const marked = new Marked(
-    globalThis.markedHighlight.markedHighlight({
+    markedHighlight({
       langPrefix: 'hljs language-',
       highlight(code, lang, info) {
         const language = hljs.getLanguage(lang) ? lang : 'plaintext';
