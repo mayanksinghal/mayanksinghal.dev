@@ -16,8 +16,6 @@ const marked = new Marked(
 class MsMarkdown extends HTMLElement {
     connectedCallback() {
         const renderedContent = marked.parse(this.textContent);
-        console.log(this.textContent);
-        console.log(renderedContent);
         this.innerHTML = renderedContent;
 
 
